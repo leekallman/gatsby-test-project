@@ -6,6 +6,13 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-sass`,
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'src',
+        path:`${__dirname}/src/`
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -28,6 +35,7 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    'gatsby-transformer-remark'
   ],
 
 }
